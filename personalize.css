@@ -1,0 +1,176 @@
+/* non-importable changes: */
+/* - change fonts.googleapis.com to api.fonts.coollabs.io */
+/* - import the following css snippets:
+/* @import url('https://d3sox.me/complementary-discord-theme/hide-nitro-upselling.theme.css');	*/
+/* @import url("https://snare-hawk.github.io/snare-CSS/profile-panel-thingy.css");	*/
+
+--font: "Manrope" !important;	
+
+/* Bug fixes */
+/* Fixes the scrollbar icons appearing when using certain fonts */	
+[class*="headerText-"] {	
+  overflow-y: hidden;	
+}
+
+/* Personal preferences */
+/* Hide the activities button when in call */	
+button[aria-label="Start an Activity"] {	
+  display: none;	
+}	
+
+/* Hides the show user profile in DM button */	
+div[role="button"][aria-label="Hide User Profile"].iconWrapper-2awDjA,	
+div[role="button"][aria-label="Show User Profile"].iconWrapper-2awDjA,	
+div[role="button"][aria-label="Show User Profile (Unavailable)"].iconWrapper-2awDjA {	
+  display: none;	
+}
+
+/* Hide super reactions */	
+[aria-label^="Add Super Reaction"],	
+#message-add-reaction-1,	
+#super-reaction-picker-tab,	
+[class^="burstEmojiSection-"],	
+[aria-label^="Reaction Picker Categories"],	
+[class^="reactionDefault-"][aria-label*="super reaction"],	
+[class^="reactionSelected-"][aria-label*="super reaction"],	
+[class^="reactions-"] > div > [style*="background:"] {	
+  display: none !important;	
+}
+
+/* Hides the apps section in the context menu when clicking on a message */	
+#message-apps {	
+  display: none;	
+}	
+/* Hides the Public tag on the server header */	
+.communityInfo-3YsNIn {	
+  display: none;	
+}
+
+/* Changes the color of server names so they actually become readable when using Ultra */	
+.text-md-bold-1mgErV,	
+.text-md-semibold-2VMhBr {	
+  color: #dcddde;	
+  text-transform: none;	
+}	
+
+/* Changes the stream application/window selector to become a list instead */	
+.sourceContainer-1uqUbz {	
+  flex-direction: column;	
+}	
+.sourceName-3Wf8QG {	
+  width: unset;	
+}	
+.tile-3POX2m > .flex-2S1XBF {	
+  flex-direction: row;	
+  justify-content: start;	
+}	
+.tile-3POX2m > .flex-2S1XBF > .flex-2S1XBF {	
+  flex: unset !important;	
+  margin-right: 16px;	
+}
+
+	/* Changes the look of the Read all button */	
+.button-ejjZWC.lookFilled-1H2Jvj.colorBrand-2M3O3N.sizeMin-3Yqxk5.grow-2T4nbg {	
+  border-radius: 10px;	
+  font-size: 12px;	
+  margin-left: 6px !important;	
+  padding: 2px 4px;	
+}	
+.button-ejjZWC.lookFilled-1H2Jvj.colorBrand-2M3O3N.sizeMin-3Yqxk5.grow-2T4nbg > .contents-3NembX {	
+  padding: 1px 4px;	
+}
+
+		
+/* Minimizes the search bar into a button until the user hovers over it */	
+:root {	
+  --transitionspeed: 0.25s;	
+}	
+.search-2Mwzzq:not(.open-1F8u2c) .searchBar-jGtisZ {	
+  width: 27px;	
+  transition: var(--transitionspeed);	
+  background-color: transparent;	
+}	
+.search-2Mwzzq:not(.open-1F8u2c):hover .searchBar-jGtisZ {	
+  width: 170px;	
+  background-color: var(--background-tertiary);	
+}	
+.search-2Mwzzq:not(.open-1F8u2c) .iconContainer-1RqWJj {	
+  transform: scale(1.3);	
+  transition: var(--transitionspeed);	
+}	
+.search-2Mwzzq:not(.open-1F8u2c):hover .iconContainer-1RqWJj {	
+  transform: scale(1);	
+}	
+.search-2Mwzzq:not(.open-1F8u2c) .icon-18rqoe {	
+  color: var(--text-normal);	
+}	
+.search-2Mwzzq:not(.open-1F8u2c):hover .icon-18rqoe {	
+  color: var(--text-muted);	
+}	
+/* Hides the new member badge */	
+[class^="newMemberBadge"] {	
+  display: none;	
+}	
+/* Hides the invite button for DM */	
+.privateChannelRecipientsInviteButtonIcon-1ObKXK {	
+  display: none;	
+}	
+/* Nuke profile decorations */	
+[mask="url(#svg-mask-avatar-decoration-profile-status-square-80)"] {	
+  mask: url("#svg-mask-avatar-status-round-80") !important;	
+}	
+[mask="url(#svg-mask-avatar-decoration-profile-status-mobile-square-80)"] {	
+  mask: url("#svg-mask-avatar-status-mobile-80") !important;	
+}	
+svg[class*="avatarDecorationHint"] {	
+  left: 0px;	
+  top: 0px;	
+  height: 80px;	
+  width: 80px;	
+}	
+[class^="userPopoutInner"] [class^="wrapper"] [class^="banner"],	
+[class^="avatarDecoration"],	
+[mask^="url(#svg-mask-avatar-decoration-status"],	
+[class*="bannerSVGWrapper"] mask image {	
+  display: none;	
+}	
+[mask^="url(#svg-mask-avatar-decoration-profile"] [class*="avatarHintInner"] {	
+  font-size: 12px !important;	
+}	
+/* Fixes the bottom bar of the Screen Share menu not being themed? */	
+.flex-2S1XBF.flex-3BkGQD.horizontalReverse-60Katr.horizontalReverse-2QssvL.flex-3BkGQD.directionRowReverse-HZatnx.justifyStart-2Mwniq.alignStretch-Uwowzr.noWrap-hBpHBz.footer-IubaaS.footerSeparator-3U8YsT {	
+  background-color: #17161b;	
+}	
+/* Fixes the PlatformIndicators plugin icon for Mobile Do Not Disturb / other cases being the wrong height */	
+.wrapper-3Un6-K.avatar-3QF_VA > svg > rect.pointerEvents-2KjWnj[mask="url(#svg-mask-status-online-mobile)"] {	
+  height: 35px !important;	
+}	
+/* Hides the Billing Settings stuff from discord settings */	
+div :has(+ .premiumTab-39eQzY),	
+.premiumTab-39eQzY,	
+.premiumTab-39eQzY + div,	
+.premiumTab-39eQzY + div + div,	
+.premiumTab-39eQzY + div + div + div,	
+.premiumTab-39eQzY + div + div + div + div,	
+.premiumTab-39eQzY + div + div + div + div + div {	
+  display: none;	
+}
+
+/* Adds a border to the user profile section and to the spotify player if the plugin is enabled */
+.container-YkUktl {	
+    background-image: linear-gradient( var(--background-primary) ,var(--background-primary), var(--background-secondary)) !important;	
+}	
+.container-1zzFcN {	
+  background-color: var(--background-primary) !important;	
+  padding-bottom: 10px !important;	
+  padding: 0.875rem !important;	
+}	
+.buttonColor-3bP3fX {	
+background-color: var(--background-secondary-alt) !important;	
+}	
+#vc-spotify-player {	
+  background-color: var(--background-primary) !important;	
+}	
+.panel-2ZFCRb {	
+  background-color: var(--background-primary) !important;	
+}
